@@ -1,5 +1,10 @@
 # Version log
 
+## v2.8 - Username as Password
+
+* Added support for username as password (currently only NTLM tested)
+  * Extended the username as password with rules
+
 ## v2.7 - Apple Silicon Edition
 
 * Initial release for Apple Silicon Edition - based on [hash-cracker v2.6](https://github.com/crypt0rr/hash-cracker/releases/tag/v2.6)
