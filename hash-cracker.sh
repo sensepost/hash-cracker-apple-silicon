@@ -2,7 +2,7 @@
 # Copyright crypt0rr
 
 function main () {
-    echo -e "hash-cracker v2.7 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
+    echo -e "hash-cracker v2.8 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
     echo "Checking if requirements are met:"
     source scripts/requirements.sh
     menu
@@ -25,6 +25,7 @@ function menu () {
     echo "13. PACK mask (read option 99)"
     echo "14. Currently not working - Fingerprint attack"
     echo "15. Directory of wordlists plain and then with OneRuleToRuleThemAll"
+    echo "16. Username iteration (read option 99, only NTLM)"
     echo -e "99. Show info about modules\n"
 
     read -p "Please enter number OR type 'search' to find hashtypes: " START
@@ -60,6 +61,8 @@ function menu () {
         source scripts/processors/fingerprint.sh
     elif [[ $START = '15' ]]; then
         source scripts/processors/multiple-wordlists.sh
+    elif [[ $START = '16' ]]; then
+        source scripts/processors/usernameaspassword.sh
     elif [[ $START = '99' ]]; then
         bash scripts/showinfo.sh
     elif [[ $START = 'search' ]]; then
