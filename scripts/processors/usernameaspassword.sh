@@ -11,8 +11,8 @@ RULELIST=($big $d3ad0ne $d3adhob0 $digits1 $digits2 $digits3 $dive $fordyv1 $gen
 
 # Logic
 cat $HASHLIST | cut -d ':' -f1 | cut -d '\' -f2 > tmp_usernames
-$HASHCAT -D2 -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST tmp_usernames
+$HASHCAT -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST tmp_usernames
 for RULE in ${RULELIST[*]}; do
-    $HASHCAT -D2 -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST tmp_usernames -r $RULE --loopback
+    $HASHCAT -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST tmp_usernames -r $RULE --loopback
 done
 rm tmp_usernames; echo -e "\nUsername as Password processing with rules done\n"

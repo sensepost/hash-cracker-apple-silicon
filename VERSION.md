@@ -1,9 +1,5 @@
 # Version log
 
-## v3.0 - GPU only
-
-* Hardcoded use of GPU since Apple decided to change things around moving script to CPU
-
 ## v2.9 - 3-rule
 
 * Added 3.rule
