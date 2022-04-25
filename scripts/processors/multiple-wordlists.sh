@@ -11,8 +11,8 @@ source scripts/rules/rules.config
 RULELIST=($ORTRTA)
 
 # Logic
-$HASHCAT -D2 -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST $WORDLIST
+$HASHCAT -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST $WORDLIST
 for RULE in ${RULELIST[*]}; do
-    $HASHCAT -D2 -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST $WORDLIST -r $RULE --loopback
+    $HASHCAT -O --bitmap-max=24 --potfile-path=$POTFILE -m$HASHTYPE $HASHLIST $WORDLIST -r $RULE --loopback
 done
 echo -e "\nMultiple wordlists done\n"
