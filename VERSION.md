@@ -1,5 +1,13 @@
 # Version log
 
+## v2.9.1 - TBD
+
+* Added `keyboardwalk.txt`
+* Added `email-domains`
+* Added descriptive text for combinator in `showinfo.sh`
+* Added `?a` to brute-force pattern
+* Added multiple brute-force patterns
+
 ## v2.9 - 3-rule
 
 * Added 3.rule
