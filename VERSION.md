@@ -1,5 +1,9 @@
 # Version log
 
+## v2.9.2 - AWK
+
+* Moved from `cut` to `awk` since previously it was not compatible with multiple outputs
+
 ## v2.9.1 - More Better
 
 * Added `keyboardwalk.txt`
