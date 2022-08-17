@@ -2,7 +2,7 @@
 # Copyright crypt0rr
 
 function main () {
-    echo -e "hash-cracker v2.9.2 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
+    echo -e "hash-cracker v2.9.4 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
     echo "Checking if requirements are met:"
     source scripts/requirements.sh
     menu
