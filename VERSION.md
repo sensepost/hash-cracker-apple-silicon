@@ -6,6 +6,7 @@
 * Added multi word list support
 * Added `german.txt` word list
 * Added two new, FaceBook based rules, thanks [@singe](https://twitter.com/singe)
+* Added word list `brutas-combined` - combining all lists in the 'passwords' category from [brutas](https://github.com/tasooshi/brutas/tree/master/wordlists/passwords)
 
 ## v2.9.4 - Dump Optimization
 
