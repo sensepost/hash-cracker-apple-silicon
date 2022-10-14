@@ -1,5 +1,13 @@
 # Version log
 
+## v3.0 - 🚀
+
+* Added Russian word list
+* Added multi word list support
+* Added `german.txt` word list
+* Added two new, FaceBook based rules, thanks [@singe](https://twitter.com/singe)
+* Added word list `brutas-combined` - combining all lists in the 'passwords' category from [brutas](https://github.com/tasooshi/brutas/tree/master/wordlists/passwords)
+
 ## v2.9.4 - Dump Optimization
 
 * Moved from showing cracked hashes with hashcat for use as input to directly taking the potfile
@@ -53,10 +61,10 @@
 
 * Added extra brute force task
 * Fixed issue where the variable was not cleared properly on self restart of the 'selector' scripts
-* Fixed issue with hashtype selector not restarting on not-known hashtype
+* Fixed issue with hash type selector not restarting on not-known hash type
 * Added `multiple-wordlists.sh` processor - option 15
 * Changed starting point after finishing task to 'main' instead of 'menu'
-* Added three new wordlists
+* Added three new word lists
 
 ## v2.4 - Mask Attack
 
@@ -101,8 +109,8 @@
 
 * Introducing some new rules
 * Small changes
-* New wordlists
-* Added search function to easily find the right hashtype mode you need
+* New word lists
+* Added search function to easily find the right hash type mode you need
 * Renamed `processor.sh` to `hash-cracker.sh`
 
 ## v1.4 - Lets enter something yourself v2
@@ -124,7 +132,7 @@
 ## v1.1 - Added rule
 
 * Added new rule - `OptimizedUpToDate.rule`
-* Small changes in list and rulelists
+* Small changes in list and rule lists
 
 ## v1.0 - Release fully working state
 
@@ -154,7 +162,7 @@
 ## v0.5 - Added Toggle-Case attack
 
 * Adjusted default `bitmap-max` size to 24
-* Added two bruteforce defaults
+* Added two brute force defaults
 * Added the following rules (leetspeak, toggles1, toggles2)
 * Added new rules to default processing job
 * Added basic Toggle-Case attack
@@ -168,7 +176,7 @@
 ## v0.3 - Added plain processing
 
 * Added the ability to process a plain word/password list against input hashes
-* Added tab completion for hashlist and wordlist selector
+* Added tab completion for hash list and word list selector
 
 ## v0.2 - Multiple changes
 
