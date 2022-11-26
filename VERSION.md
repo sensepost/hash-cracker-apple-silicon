@@ -1,5 +1,11 @@
 # Version log
 
+## v3.1 - To speed or not to speed #kernels
+
+* Optimized kernels are used by default but can be disabled with the `-n` or `--no-limit` flag
+* Help menu implemented
+* Moved search functionality
+
 ## v3.0 - 🚀
 
 * Added Russian word list
