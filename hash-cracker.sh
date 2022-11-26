@@ -26,7 +26,7 @@ function menu () {
     echo "15. Directory of wordlists plain and then with OneRuleToRuleThemAll"
     echo -e "16. Username iteration (read option 99, only NTLM)\n"
 
-    read -p "Please enter number OR type 'search' to find hashtypes: " START
+    read -p "Please enter job number: " START
     if [[ "$START" = "0" ]] || [[ "$START" = "exit" ]]; then
         echo "Bye..."; exit 1
     elif [[ $START = '1' ]]; then
@@ -61,8 +61,6 @@ function menu () {
         source scripts/processors/multiple-wordlists.sh
     elif [[ $START = '16' ]]; then
         source scripts/processors/usernameaspassword.sh
-    elif [[ $START = 'search' ]]; then
-        source scripts/extensions/search.sh
     else
         echo -e "Not valid, try again\n"; menu
     fi
@@ -77,7 +75,7 @@ if [ "$1" == '-h' ] || [ "$1" == '--help' ]; then
     echo -e "Note: flags are optional, by default hash-cracker will run with optimized kernels enabled."
     echo -e "\nUsage: ./hash-cracker [FLAG]"
     echo -e "\nFlags:"
-    echo -e "\t-n / --no-limit\n\t\t Disable the use of optimized kernels (limits password length)"
+    echo -e "\t-n / --no-limit\n\t\t Disable the use of optimized kernels (un-limits password length)"
     echo -e "\t-m / --module-info\n\t\t Display information around modules/options"
     echo -e "\t-s [hash-name] / --search [hash-name]\n\t\t Will search local DB for hash module. E.g. '-s ntlm'"
 elif [ "$1" == '-m' ] || [ "$1" == '--module-info' ]; then
