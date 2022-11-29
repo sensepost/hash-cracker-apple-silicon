@@ -9,6 +9,12 @@ Some sites where you can find word lists:
 
 Want to make the ***$HEX[1234]*** Hashcat output readable? Have a look at [hex-to-readable](https://github.com/crypt0rr/hex-to-readable).
 
+## Installation
+
+```plain
+git clone https://github.com/crypt0rr/hash-cracker
+```
+
 ## Usage
 
 ```plain
