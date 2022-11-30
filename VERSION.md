@@ -1,5 +1,13 @@
 # Version log
 
+## v3.1 - To speed or not to speed #kernels
+
+* Optimized kernels are used by default but can be disabled with the `-n` or `--no-limit` flag
+* Help menu implemented
+* Moved search functionality
+* Added Markov-chain password generator based on [bujimuji/markov-passwords](https://github.com/bujimuji/markov-passwords)
+* Added [Dutch OpenTaal wordlist](https://github.com/OpenTaal/opentaal-wordlist/blob/master/wordlist.txt)
+
 ## v3.0 - 🚀
 
 * Added Russian word list
