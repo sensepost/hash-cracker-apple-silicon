@@ -16,6 +16,12 @@ if [[ -x "scripts/extensions/hashcat-utils/bin/expander.bin" ]]; then
 else
     echo '[-] expander is not available/executable or found, this is needed for fingerprint cracking'
 fi
+if [[ -x "scripts/extensions/cewl/cewl.rb" ]]; then
+    echo '[+] CeWL is executable'
+    CEWL="scripts/extensions/cewl/cewl.rb"
+else
+    echo '[-] CeWL is not executable or found (option 18)'
+fi
 
 echo -e "\nKernel mode:"
 if [ "$NOP" == '-n' ] || [ "$NOP" == '--no-limit' ]; then
