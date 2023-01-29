@@ -3,9 +3,9 @@
 
 function hash-cracker () {
     echo -e "Mandatory modules:"
-    source scripts/mandatory-requirements.sh
+    source scripts/mandatory-checks.sh
     echo -e "\nOptional modules:"
-    source scripts/optional-requirements.sh
+    source scripts/optional-checks.sh
     menu
 }
 
