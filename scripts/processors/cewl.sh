@@ -12,9 +12,9 @@ until [[ $DEPTH = [0-9] ]]; do
 done
 
 read -p "Minimum word length: " LENGTH
-until [[ $LENGTH = [0-9] ]]; do
-     echo "Please only use 0-9."
-     read -p "Minimum word length (0-9): " LENGTH
+until [[ $LENGTH = [1-9] ]]; do
+     echo "Please only use 1-9."
+     read -p "Minimum word length (1-9): " LENGTH
 done
 
 echo -e "\nCeWL is going to start, this will take some time..."
