@@ -2,8 +2,10 @@
 # Copyright crypt0rr
 
 function hash-cracker () {
-    echo "Checking if requirements are met:"
-    source scripts/requirements.sh
+    echo -e "Mandatory modules:"
+    source scripts/mandatory-checks.sh
+    echo -e "\nOptional modules:"
+    source scripts/optional-checks.sh
     menu
 }
 
@@ -22,10 +24,11 @@ function menu () {
     echo "11. Common substring (advise: first run steps above)"
     echo "12. Currently not working - PACK rulegen"
     echo "13. PACK mask"
-    echo "14. Currently not working - Fingerprint attack"
+    echo "14. Fingerprint attack"
     echo "15. Directory of wordlists plain and then with OneRuleToRuleThemAll"
     echo "16. Username iteration (only complete NTDS)"
-    echo -e "17. Markov-chain passwords generator\n"
+    echo "17. Markov-chain passwords generator"
+    echo -e "18. CeWL wordlist generator\n"
 
     read -p "Please enter job number: " START
     if [[ "$START" = "0" ]] || [[ "$START" = "exit" ]]; then
@@ -56,7 +59,7 @@ function menu () {
         source scripts/processors/pack-rule.sh
     elif [[ $START = '13' ]]; then
         source scripts/processors/pack-mask.sh
-    elif [[ $START = '-' ]]; then
+    elif [[ $START = '14' ]]; then
         source scripts/processors/fingerprint.sh
     elif [[ $START = '15' ]]; then
         source scripts/processors/multiple-wordlists.sh
@@ -64,13 +67,15 @@ function menu () {
         source scripts/processors/usernameaspassword.sh
     elif [[ $START = '17' ]]; then
         source scripts/processors/markov-generator.sh
+    elif [[ $START = '18' ]]; then
+        source scripts/processors/cewl.sh
     else
         echo -e "Not valid, try again\n"; menu
     fi
     hash-cracker
 }
 
-echo -e "hash-cracker v3.1 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
+echo -e "hash-cracker v3.2 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
 
 NOP=$1
 
