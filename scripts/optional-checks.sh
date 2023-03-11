@@ -22,12 +22,3 @@ if [[ -x "scripts/extensions/cewl/cewl.rb" ]]; then
 else
     echo '[-] CeWL is not executable or found (option 18)'
 fi
-
-echo -e "\nKernel mode:"
-if [ "$NOP" == '-n' ] || [ "$NOP" == '--no-limit' ]; then
-    echo "[-] Optimised kernels disabled"
-    KERNEL=''
-else
-    echo "[+] Optimised kernels enabled"
-    KERNEL='-O'
-fi
