@@ -50,20 +50,17 @@ done
 
 hash-cracker
 
-if [ "$LOOPBACK" = ' ' ]; then
-    echo -e "\nLoopback mode:"
-    echo "[-] Loopback disabled"
-else
-    echo -e "\nLoopback mode:"
-    echo "[+] Loopback enabled"
-    LOOPBACK='--loopback'
-fi
-
+echo -e "\nVariable Parameters:" 
 if [ "$KERNEL" = ' ' ]; then
-    echo -e "\nKernel mode:"
     echo "[-] Optimised kernels disabled"
 else
-    echo -e "\nKernel mode:"
     echo "[+] Optimised kernels enabled"
     KERNEL='-O'
+fi
+
+if [ "$LOOPBACK" = ' ' ]; then
+    echo "[-] Loopback disabled"
+else
+    echo "[+] Loopback enabled"
+    LOOPBACK='--loopback'
 fi
