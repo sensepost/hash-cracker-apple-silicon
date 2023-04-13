@@ -1,5 +1,9 @@
 # Version log
 
+## v4.0 - It is all about the flags :flag:
+
+* Removed `-m` from module information
+
 ## v3.5 - New hashes
 
 * Updated supported hash types, based on hashcat `v6.2.6-420-gdc51a1a97`
