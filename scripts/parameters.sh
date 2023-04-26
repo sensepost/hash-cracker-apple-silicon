@@ -7,6 +7,7 @@ if [ "$1" == '-h' ] || [ "$1" == '--help' ]; then
     echo -e "\nFlags:"
     echo -e "\t-l / --no-loopback\n\t\t Disable loopback functionality"
     echo -e "\t-n / --no-limit\n\t\t Disable the use of optimized kernels (un-limits password length)"
+    echo -e "\t--hwmon-enable\n\t\t Enable hashcat to do hardware monitoring"
     echo -e "\t--module-info\n\t\t Display information around modules/options"
     echo -e "\t-s [hash-name] / --search [hash-name]\n\t\t Will search local DB for hash module. E.g. '-s ntlm'"
     exit 1
@@ -43,6 +44,7 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
         -n|--no-limit) KERNEL=' ' ;;
         -l|--no-loopback) LOOPBACK=' ' ;;
+        --hwmon-enable) HWMON=' ';;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
@@ -63,4 +65,11 @@ if [ "$LOOPBACK" = ' ' ]; then
 else
     echo "[+] Loopback enabled"
     LOOPBACK='--loopback'
+fi
+
+if [ "HWMON" = ' ' ]; then
+    echo "[-] Hardware monitoring disabled"
+else
+    echo "[+] Hardware monitoring enabled"
+    HWMON='--hwmon-disable'
 fi
