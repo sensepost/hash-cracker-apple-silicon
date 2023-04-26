@@ -1,6 +1,6 @@
 # Version log
 
-## v4.0 - It is all about the flags :flag:
+## v3.6 - Stacking
 
 * Removed `-m` from module information
 * New rule - [stacking58](https://github.com/hashcat/hashcat/blob/master/rules/stacking58.rule)
