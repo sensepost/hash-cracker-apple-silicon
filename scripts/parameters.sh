@@ -67,9 +67,9 @@ else
     LOOPBACK='--loopback'
 fi
 
-if [ "HWMON" = ' ' ]; then
-    echo "[-] Hardware monitoring disabled"
-else
+if [ "$HWMON" = ' ' ]; then
     echo "[+] Hardware monitoring enabled"
+else
+    echo "[-] Hardware monitoring disabled"
     HWMON='--hwmon-disable'
 fi
