@@ -1,6 +1,6 @@
 # Version log
 
-## v3.6 - Stacking
+## v3.6 - World Password Day
 
 * Removed `-m` from module information
 * New rule - [stacking58](https://github.com/hashcat/hashcat/blob/master/rules/stacking58.rule)
