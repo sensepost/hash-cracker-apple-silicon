@@ -10,6 +10,7 @@ if [ "$1" == '-h' ] || [ "$1" == '--help' ]; then
     echo -e "\t--hwmon-enable\n\t\t Enable hashcat to do hardware monitoring"
     echo -e "\t--module-info\n\t\t Display information around modules/options"
     echo -e "\t-s [hash-name] / --search [hash-name]\n\t\t Will search local DB for hash module. E.g. '-s ntlm'"
+    echo -e "\t--static\n\t\t Use the 'hash-cracker.conf' static configuration file."
     exit 1
 elif [ "$1" == '--module-info' ]; then
     echo "Information about the modules"
@@ -46,12 +47,62 @@ while [[ "$#" -gt 0 ]]; do
         -n|--no-limit) KERNEL=' ' ;;
         -l|--no-loopback) LOOPBACK=' ' ;;
         --hwmon-enable) HWMON=' ';;
+        --static) CONFIGFILE=' ' ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
 done
 
+if [ "$CONFIGFILE" = ' ' ]; then
+    STATICCONFIG=true
+else
+    STATICCONFIG=false
+fi
+
 hash-cracker
+
+# Requirements
+if [[ "$STATICCONFIG" = true ]]; then
+    source hash-cracker.conf
+else
+    HASHCAT=(/usr/local/bin/hashcat)
+    POTFILE=(hash-cracker.pot)
+fi
+
+# Logic
+echo -e "\nMandatory modules:"
+if ! [ -x "$(command -v $HASHCAT)" ]; then
+    echo '[-] Hashcat is not installed or sourced in your profile'; ((COUNTER=COUNTER + 1))
+else
+    echo '[+] Hashcat is installed'
+fi
+if test -f "$POTFILE"; then
+    echo '[+] Potfile' $POTFILE 'present'
+else
+    echo '[-] Potfile not present, will create' $POTFILE
+    touch $POTFILE
+fi
+if [ "$COUNTER" \> 0 ]; then
+    echo -e "\nNot all mandatory requirements are met. Please fix and try again."; exit 1
+fi
+
+echo -e "\nOptional modules:"
+if [[ -x "scripts/extensions/common-substr" ]]; then
+    echo '[+] common-substr is executable'
+else
+    echo '[-] common-substr is not executable or found (option 10 / 11)'
+fi
+if [[ -x "scripts/extensions/hashcat-utils/bin/expander.bin" ]]; then
+    echo '[+] expander is executable'
+else
+    echo '[-] expander is not available/executable or found, this is needed for fingerprint cracking'
+fi
+if [[ -x "scripts/extensions/cewl/cewl.rb" ]]; then
+    echo '[+] CeWL is executable'
+    CEWL="scripts/extensions/cewl/cewl.rb"
+else
+    echo '[-] CeWL is not executable or found (option 18)'
+fi
 
 echo -e "\nVariable Parameters:" 
 if [ "$KERNEL" = ' ' ]; then
