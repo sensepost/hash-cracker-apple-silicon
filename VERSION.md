@@ -1,5 +1,12 @@
 # Version log
 
+## v3.7 - Just before
+
+* Introduced `hash-cracker.conf` to set a static config yourself
+* Merged `mandatory-checks.sh` and `optional-checks.sh` into `parameters.sh`
+* Changed all processors to use the static config file if chosen
+* Option to use the static config `--static`
+
 ## v3.6 - World Password Day
 
 * Removed `-m` from module information
