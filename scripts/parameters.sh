@@ -88,14 +88,14 @@ fi
 
 echo -e "\nOptional modules:"
 if [[ -x "scripts/extensions/common-substr" ]]; then
-    echo '[+] common-substr is executable'
+    echo '[+] Common-substr is executable'
 else
-    echo '[-] common-substr is not executable or found (option 10 / 11)'
+    echo '[-] Common-substr is not executable or found (option 10 / 11)'
 fi
 if [[ -x "scripts/extensions/hashcat-utils/bin/expander.bin" ]]; then
-    echo '[+] expander is executable'
+    echo '[+] Expander is executable'
 else
-    echo '[-] expander is not available/executable or found, this is needed for fingerprint cracking'
+    echo '[-] Expander is not available/executable or found, this is needed for fingerprint cracking'
 fi
 if [[ -x "scripts/extensions/cewl/cewl.rb" ]]; then
     echo '[+] CeWL is executable'
