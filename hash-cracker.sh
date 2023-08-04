@@ -2,11 +2,7 @@
 # Copyright crypt0rr
 
 function hash-cracker () {
-    echo -e "hash-cracker v3.6 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)\n"
-    echo -e "Mandatory modules:"
-    source scripts/mandatory-checks.sh
-    echo -e "\nOptional modules:"
-    source scripts/optional-checks.sh
+    echo -e "\nhash-cracker v3.7 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)"
 }
 
 function menu () {
@@ -31,7 +27,6 @@ function menu () {
     echo "18. CeWL wordlist generator"
     echo "19. Digit remover"
     echo -e "20. Stacker\n"
-
 
     read -p "Please enter job number: " START
     if [[ "$START" = "0" ]] || [[ "$START" = "exit" ]]; then
