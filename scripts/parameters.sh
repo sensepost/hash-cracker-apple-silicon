@@ -65,7 +65,7 @@ hash-cracker
 if [[ "$STATICCONFIG" = true ]]; then
     source hash-cracker.conf
 else
-    HASHCAT=(/usr/local/bin/hashcat)
+    HASHCAT=$(command -v hashcat)
     POTFILE=(hash-cracker.pot)
 fi
 
