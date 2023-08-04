@@ -32,6 +32,7 @@ elif [ "$1" == '--module-info' ]; then
     echo "17. Markov-chain password generator will generate new password sets based on Time-Space Tradeoff - https://www.cs.cornell.edu/~shmat/shmat_ccs05pwd.pdf"
     echo "18. Custom Word List Generator - CeWL - Spiders a given URL and creates a custom wordlist."
     echo "19. Will take the potfile, strip the digits from the cleartexts and perform a hybrid attack accordingly, thereafter some rules to finish the job."
+    echo "20. Using the stacking58.rule with a rule stacked on top of it to create even more variation on the randomness." 
     exit 1
 elif [ "$1" == '-s' ] || [ "$1" == '--search' ]; then
     TYPELIST="scripts/extensions/hashtypes"
