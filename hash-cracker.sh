@@ -2,7 +2,7 @@
 # Author: crypt0rr - https://github.com/crypt0rr/
 
 function hash-cracker () {
-    echo -e "\nhash-cracker v3.7 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)"
+    echo -e "\nhash-cracker v3.8 Apple Silicon Edition by crypt0rr (https://github.com/crypt0rr)"
 }
 
 function menu () {
