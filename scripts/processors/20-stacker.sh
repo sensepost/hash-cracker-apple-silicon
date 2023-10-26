@@ -16,8 +16,6 @@ else
     source scripts/selectors/hashlist.sh
 fi
 
-
-
 # Single or multiple wordlist
 read -p "Single or Multiple wordlist mode? S/M: " MODE
 
