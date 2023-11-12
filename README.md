@@ -1,6 +1,10 @@
 # DEPRECATED | hash-cracker - Apple Silicon Edition
 
+---
+
 **Please note:** hash-cracker - Apple Silicon Edition was merged into [hash-cracker](https://github.com/sensepost/hash-cracker/) v4.0.
+
+---
 
 Simple script to get some hash cracking done effectively. In [this blog](https://sensepost.com/blog/2023/hash-cracker-password-cracking-done-effectively/) you can read some background on hash-cracker.
 
