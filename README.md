@@ -2,7 +2,7 @@
 
 ---
 
-**Please note:** hash-cracker - Apple Silicon Edition was merged into [hash-cracker](https://github.com/sensepost/hash-cracker/) v4.0.
+**Please note:** hash-cracker - Apple Silicon Edition was merged into [hash-cracker](https://github.com/sensepost/hash-cracker/) v4.0 onwards.
 
 ---
 
